@@ -1,0 +1,13 @@
+.main-contactos{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    height: 50vh;
+    background-color: antiquewhite;
+}
+
+
+.link-footer-C{
+    color: white;
+}

@@ -1,0 +1,25 @@
+#favoritos-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.favoritos-img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.favorito-activo {
+    display: none;
+}
+
+#favorito-toggle{
+    display: none;
+}
+#favorito-toggle:checked + label .favorito-activo {
+    display: inline-block;
+}
+
+#favorito-toggle:checked + label .favorito-normal {
+    display: none;
+}

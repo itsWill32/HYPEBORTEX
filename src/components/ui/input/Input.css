@@ -1,0 +1,15 @@
+
+
+
+.form-label {
+    display: block;
+    margin-left: 5  px;
+}
+
+.form-control {
+    padding: .5rem;
+    width: 10%;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
