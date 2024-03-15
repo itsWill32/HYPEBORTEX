@@ -1,0 +1,19 @@
+.main-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container-formL{
+    width: 24vw;
+    height: 40vh;
+    margin-top: 8%;
+}
+
+.form-Login{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+}
+

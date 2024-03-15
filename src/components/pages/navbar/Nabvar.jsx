@@ -5,6 +5,9 @@ import GlobalLink from '../../ui/link/Link'
 import { FaUser } from 'react-icons/fa';
 import { FiShoppingCart } from "react-icons/fi";
 import { FaHeart } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
+import Login from '../login/Login'
+
 
 
 export default function Nabvar() {
@@ -13,7 +16,7 @@ export default function Nabvar() {
         <div className='main-header'>
 
 
-            <GlobalInput withLabel={false} type={'search'} placeholder={'Buscar'} />
+            <GlobalInput withLabel={false} type={'search'} placeholder={'Buscar'} custoClassInput={'input-Search'} />
             
 
             <nav className='container-nav-Type'>

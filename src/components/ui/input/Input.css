@@ -3,13 +3,11 @@
 
 .form-label {
     display: block;
-    margin-left: 5  px;
+    margin-left: 5px;
 }
 
-.form-control {
+#form-control {
     padding: .5rem;
-    width: 10%;
     border-radius: 5px;
     border: 1px solid grey;
 }
-

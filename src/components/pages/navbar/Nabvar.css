@@ -7,19 +7,23 @@
     height: 10vh;
 }
 
+.input-Search{
+    width: 20%;
+    margin-left: -6%;
+}
 
 .container-nav-Type{
     width: 15%;
+    margin-right: 3%;
 }
 
 
 .main-header nav>ul{ 
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
 
 }
 
 .container-nav-Icons{
     width: 10%;
-    
 }

@@ -1,14 +1,18 @@
 import './App.css';
-import Navbar from './components/pages/navbar/Nabvar'
-import CardIterms from './components/ui/cardItems/CardIterms';
+import Nabvar from './components/pages/navbar/Nabvar';
+import CardItems from './components/ui/cardItems/CardIterms';
 import Footer from './components/pages/footer/Footer'
+import Login from './components/pages/login/Login';
+import Register from './components/pages/Register/Register';
 
 function App() {
 return (
   <>
-    <Navbar/>
-    <CardIterms customClassCard={'card'}/>
-    <Footer/>
+    <Nabvar />
+    <Login />
+    <Register />
+    <CardItems customClassCard={'card'} />
+    <Footer />
   </>
   );
 }
