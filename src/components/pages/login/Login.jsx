@@ -1,14 +1,14 @@
-import  React from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
-import './Login.css'
+import './Login.css';
 import FormLogin from '../form/FormLogin/FormLogin';
 
 const styleContentModal = {
   display: 'flex',
   width: 360,
-  height: 420, 
+  height: 420,
   borderRadius: 5,
   bgcolor: 'background.paper',
   p: 4,
@@ -17,24 +17,18 @@ const styleContentModal = {
 };
 
 const styleModal = {
-  color: 'black'
-}
+  color: 'black',
+};
 
-export default function Login() {
-
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+export default function Login({ isOpen, handleClose }) {
   return (
     <>
-      <div >
-        <Button onClick={handleOpen}>Iniciar Sesion</Button>
+      <div>
         <Modal
-          open={open}
+          open={isOpen}
           onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
+          aria-labelledby='modal-modal-title'
+          aria-describedby='modal-modal-description'
           sx={styleModal}
         >
           <Box sx={styleContentModal}>

@@ -1,20 +1,20 @@
 import './App.css';
-import Nabvar from './components/pages/navbar/Nabvar';
+import Navbar from './components/pages/navbar/Nabvar';
 import CardItems from './components/ui/cardItems/CardIterms';
 import Footer from './components/pages/footer/Footer'
 import Login from './components/pages/login/Login';
-import Register from './components/pages/Register/Register';
+import { useState } from 'react';
 
-function App() {
-return (
-  <>
-    <Nabvar />
-    <Login />
-    <Register />
-    <CardItems customClassCard={'card'} />
-    <Footer />
-  </>
-  );
-}
-
-export default App;
+  
+  function App() {
+    const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  
+    return (
+      <div>
+        <Navbar openLogin={() => setIsLoginModalOpen(true)} />
+        <Login isOpen={isLoginModalOpen} handleClose={() => setIsLoginModalOpen(false)} />
+      </div>
+    );
+  }
+  
+  export default App;

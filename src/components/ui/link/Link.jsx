@@ -1,14 +1,15 @@
 import React from "react";
 import './Link.css'
+import { Link } from "react-router-dom";
 
-export default function GlobalLink({valueStr="", icon, customClassLink, handle}) {
+export default function GlobalLink({valueStr="", icon, customClassLink, handle, to}) {
     return (
         <>
-            <a href="/" className={customClassLink} >
-                
+           
+            <Link to={to} className={customClassLink} >
                 {icon && <span className="icon" onClick={handle}>{icon}</span>}
-                {valueStr }
-            </a>
+                {valueStr}
+            </Link>
         </>
     );
 } 

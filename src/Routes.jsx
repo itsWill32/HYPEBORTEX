@@ -1,13 +1,12 @@
 import React from 'react';
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
-import Navbar from './components/pages/navbar/Nabvar'
 
 
 function Rutas() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/po' element={<Navbar />} />
+        <Route path='/inicio' element={<div>Listo</div>} />
         <Route path="*"  element={<div><h1>no encontrado</h1></div>}  />
       </Routes>
     </BrowserRouter>
