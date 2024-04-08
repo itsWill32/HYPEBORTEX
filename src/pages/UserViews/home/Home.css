@@ -1,0 +1,32 @@
+.container-main{
+    height: 80vh;
+    width: 90%;
+    margin-bottom: 60%;
+    margin-left: 6%;
+    margin-top: 3%;
+}
+
+.commercial-container{
+    width: 100%;
+    height: 55vh;
+}
+
+.commercial-container img{
+    width: inherit;
+    height: inherit;
+}
+
+.container-sneakers,
+.container-moda{
+    width: 100%;
+    margin-bottom: -15%;
+    margin-top: -14%;
+}
+
+.sneakers,
+.featured-Products{
+    display: flex;
+    gap: 5rem;
+    margin-top: 2%;
+}
+

@@ -1,0 +1,28 @@
+.container-clothing {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 5rem;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .container-clothing {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .container-clothing {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container-clothing {
+      grid-template-columns: repeat(1, 1fr); 
+    }
+  }
+  

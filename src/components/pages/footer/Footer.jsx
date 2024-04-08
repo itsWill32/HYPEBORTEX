@@ -6,10 +6,10 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import Paypal from './contactosFooter/paypal.png'
 
-export default function Footer() {
+export default function Footer({customClassFooter}) {
   return (
     <>
-      <div className="main-footer">
+      <div id="main-footer" className={customClassFooter}>
         <div className="container-parragraph">
           <div>
             <h1>HYPEBORTEX</h1>

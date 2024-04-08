@@ -1,0 +1,18 @@
+.menu-slider{
+    text-align: center;
+    margin: 20px;
+}
+
+.menu-slider li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu-slider li a {
+    display: inline-block;
+}
+
+.menu-slider img{
+    width: 20px;
+    height: 20px;
+}

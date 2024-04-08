@@ -19,15 +19,15 @@ export default function Nabvar({openLogin}) {
 
             <nav className='container-nav-Type'>
                 <ul>
-                    <GlobalLink  valueStr={'INICIO'} />
-                    <GlobalLink  valueStr={'ROPA'} />
-                    <GlobalLink  valueStr={'CALZADO'} />
+                    <GlobalLink  valueStr={'INICIO'} url={'/'} />
+                    <GlobalLink  valueStr={'ROPA'} url={'/Clothing'} />
+                    <GlobalLink  valueStr={'CALZADO'} url={'/Footwear'} />
                 </ul>
             </nav>
             
             <nav className='container-nav-Icons'>
                 <ul>
-                    <GlobalLink  icon={<FiShoppingCart/>} customClassLink={'link-nav-I'} />
+                    <GlobalLink  icon={<FiShoppingCart/>}   />
                     <GlobalLink  icon={<FaHeart/>} />
                     <GlobalLink  icon={<FaUser/>} handle={openLogin}  />
                 </ul>
