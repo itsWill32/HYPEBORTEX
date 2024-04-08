@@ -24,6 +24,14 @@
 .button-login{
     width: 90%;
     margin-left: 5%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
 p{
@@ -38,8 +46,12 @@ p{
     margin-left: 5%;
     background-color: white;
     color: black;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 5vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    flex-direction: row-reverse;
 }

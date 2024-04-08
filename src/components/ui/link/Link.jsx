@@ -9,6 +9,7 @@ export default function GlobalLink({ valueStr = "", icon, customClassLink, handl
         <Link to={url} className={customClassLink}>
             {icon && <span className="icon" onClick={handle}>{icon}</span>}
             {valueStr}
+            
         </Link>
     );
 }

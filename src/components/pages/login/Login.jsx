@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import './Login.css';
 import FormLogin from '../form/FormLogin/FormLogin';
+import FormRegister from '../form/FormRegister/FormRegister';
+import GlobalButton from '../../ui/button/Button';
 
 const styleContentModal = {
   display: 'flex',
   width: 360,
-  height: 420,
+  height: 500,
   borderRadius: 5,
   bgcolor: 'background.paper',
   p: 4,
@@ -20,6 +22,12 @@ const styleModal = {
 };
 
 export default function Login({ isOpen, handleClose }) {
+  const [showLoginForm, setShowLoginForm] = useState(true); // Estado para controlar qué formulario se muestra
+
+  const toggleForm = () => {
+    setShowLoginForm(!showLoginForm); // Cambiar entre mostrar el formulario de inicio de sesión y el formulario de registro
+  };
+
   return (
     <>
       <div>
@@ -34,8 +42,11 @@ export default function Login({ isOpen, handleClose }) {
             <div className='main-Login'>
               <h2>Entra en HYPEBORTEX</h2>
               <div className='container-formL'>
-                <h4>INICIA SESION</h4>
-                <FormLogin customClassFormL={'form-Login'} />
+                <nav className='nav-modal'>
+                  <GlobalButton content={'INICIA SESION'} customClassButton={'login-Button'} onClickButton={() => setShowLoginForm(true)} type={'submit'} />
+                  <GlobalButton content={'REGISTRATE'} customClassButton={'register-Button'} onClickButton={() => setShowLoginForm(false)} type={'submit'} />
+                </nav>
+                {showLoginForm ? <FormLogin customClassFormL={'form-Login'} /> : <FormRegister customClassFormR={'form-Register'} />}
               </div>
             </div>
           </Box>

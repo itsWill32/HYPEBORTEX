@@ -1,8 +1,14 @@
+.main-Login{
+    margin-top: -15%;
+}
 
 .container-formL{
     width: 24vw;
     height: 40vh;
     margin-top: 8%;
+}
+.nav-modal{
+    margin-bottom: 8%;
 }
 
 .form-Login{
@@ -11,3 +17,16 @@
     margin-top: 4%;
 }
 
+.form-Register{
+    display: flex;
+    flex-direction: column;
+    margin-top: -10%;
+}
+
+
+.login-Button,
+.register-Button{
+    color: black;
+    background-color: white;
+    margin-top: 5%;
+}

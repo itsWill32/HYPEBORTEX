@@ -1,24 +1,24 @@
-.container-formL{
+.container-formR{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.input-email{
+.input-emailR{
     margin-bottom: 5%;
 }
 
-.input-password{
+.input-passwordR{
     margin-bottom: 2%;
 }
 
-.forget-password{
+.forget-passwordR{
     font-size: .8rem;
     margin-left: 5%;
     margin-bottom: 5%;
 }
 
-.button-login{
+.button-register-R{
     width: 90%;
     margin-left: 5%;
 }
@@ -30,13 +30,30 @@ p{
     margin-bottom: 4%;
 }
 
-.button-google{
+.button-google-R {
     width: 90%;
     margin-left: 5%;
     background-color: white;
     color: black;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 5vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    flex-direction: row-reverse;
+}
+
+.button-register-R {
+    width: 90%;
+    margin-left: 5%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    border-radius: 5px;
+    font-size: 1rem;
 }
