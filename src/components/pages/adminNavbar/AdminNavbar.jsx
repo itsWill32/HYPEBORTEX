@@ -14,7 +14,7 @@ export default function AdminNavbar({openModalAdmin}) {
 
             <nav className='container-nav'>
                 <ul>
-                    <h2>ADMINISTRADOR</h2>
+                <GlobalLink  valueStr='ADMINISTRADOR' url={"/ADMIN/Home"}  />
                 </ul>
             </nav>
             

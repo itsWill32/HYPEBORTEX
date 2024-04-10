@@ -1,5 +1,6 @@
 .search-nameE {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-left: 2.5%;
   margin-top: 3%;

@@ -1,11 +1,14 @@
 import './AdminEditProduct.css';
 import GlobalInput from '../../../components/ui/input/Input';
 import GlobalButton from '../../../components/ui/button/Button';
-import FormEditProduct from '../../../components/ui/formAddProduct/formAddProduct'
+import FormEditProduct from '../../../components/ui/formAddProduct/formAddProduct';
+import NavbarAdmin from '../../../components/pages/adminNavbar/AdminNavbar'
+
 
 export default function AdminEditProduct() {
    return (
     <>
+    <NavbarAdmin />
     <div className='search-nameE'>
          <GlobalInput type={'text'} withLabel={true} label={' ingrese el nombre del articulo a editar:'} placeholder={'nombre'} custoClassInput={'input-searchE'} /> 
          <GlobalButton content="buscar articulo" customClassButton="button-searchE" />
