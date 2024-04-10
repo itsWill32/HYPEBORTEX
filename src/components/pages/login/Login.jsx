@@ -22,10 +22,10 @@ const styleModal = {
 };
 
 export default function Login({ isOpen, handleClose }) {
-  const [showLoginForm, setShowLoginForm] = useState(true); // Estado para controlar qué formulario se muestra
+  const [showLoginForm, setShowLoginForm] = useState(true);
 
   const toggleForm = () => {
-    setShowLoginForm(!showLoginForm); // Cambiar entre mostrar el formulario de inicio de sesión y el formulario de registro
+    setShowLoginForm(!showLoginForm);
   };
 
   return (

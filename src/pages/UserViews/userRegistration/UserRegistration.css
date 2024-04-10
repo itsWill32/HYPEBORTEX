@@ -1,0 +1,43 @@
+.completeRegister{
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-completeRegister{
+    height: 70%;
+    width: 65%;
+    margin-left: 20%;
+    display: flex;
+}
+
+.button-register-container{
+    width: 65%;
+    height: 20%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-register{
+    width: 50%;
+    
+}
+
+.container-register-left{
+    width: 50%;
+    height: 100%;
+}
+
+.container-register-right{
+    width: 50%;
+    height: 100%;
+}
+
+.input-cpmpleteRegistro{
+    width: 90%;
+    margin-bottom: 14%;
+}

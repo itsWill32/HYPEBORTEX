@@ -1,0 +1,29 @@
+.main-header-A{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 10vh;
+}
+
+.input-Search{
+    width: 20%;
+    margin-left: -6%;
+}
+
+.container-nav{
+    width: 15%;
+    margin-right: 3%;
+}
+
+
+.main-header nav>ul{ 
+    display: flex;
+    justify-content:space-between;
+
+}
+
+.container-nav-Icons-A{
+    width: 10%;
+}

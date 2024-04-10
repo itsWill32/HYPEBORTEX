@@ -17,8 +17,6 @@ export default function FormLogin({customClassFormL}) {
             <p>o</p>
 
             <GlobalLink valueStr={'Continuar con'}  icon={<FcGoogle />} customClassLink={'button-google'} url={'/goggle'}  />
-            <GlobalLink valueStr={'Administrador'}  customClassLink={'button-ADMIN'} url={'/ADMIN/Home'}  />
-
 
         </form>
     </>

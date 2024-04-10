@@ -1,0 +1,30 @@
+import React from 'react'
+import './AdminNavbar.css'
+import GlobalLink from '../../ui/link/Link'
+import { FaUser } from 'react-icons/fa';
+
+
+
+export default function AdminNavbar({openModalAdmin}) {
+  return (
+    <>
+        <div className='main-header-A'>
+
+            
+
+            <nav className='container-nav'>
+                <ul>
+                    <h2>ADMINISTRADOR</h2>
+                </ul>
+            </nav>
+            
+            <nav className='container-nav-Icons-A'>
+                <ul>
+                    <GlobalLink  icon={<FaUser/>} handle={openModalAdmin}  />
+                </ul>
+            </nav>
+
+        </div>
+    </>
+  )
+}
