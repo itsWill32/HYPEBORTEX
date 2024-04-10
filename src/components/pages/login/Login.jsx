@@ -44,7 +44,7 @@ export default function Login({ isOpen, handleClose }) {
               <div className='container-formL'>
                 <nav className='nav-modal'>
                   <GlobalButton content={'INICIA SESION'} customClassButton={'login-Button'} onClickButton={() => setShowLoginForm(true)} type={'submit'} />
-                  <GlobalButton content={'REGISTRATE'} customClassButton={'register-Button'} onClickButton={() => setShowLoginForm(false)} type={'submit'} />
+                  <GlobalButton content={'REGISTRATE'} customClassButton={'register-Button'} onClickButton={() => setShowLoginForm(false)} type={'submit'} url={'/'} />
                 </nav>
                 {showLoginForm ? <FormLogin customClassFormL={'form-Login'} /> : <FormRegister customClassFormR={'form-Register'} />}
               </div>

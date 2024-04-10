@@ -5,12 +5,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './pages/UserViews/home/Home';
 import Clothing from './pages/UserViews/clothing/Clothing';
 import Footwear from './pages/UserViews/footwear/Footwear';
-import InfoProduct from './pages/UserViews/infoProduct/InfoProduct';
+import InfoProduct from './pages/UserViews/infoProduct/Product.jsx'
 import PurchasesMade from './pages/UserViews/purchasesMade/PurchasesMade';
 import ShoppingCart from './pages/UserViews/shoppingCart/ShoppingCart';
-import UserRegistration from './pages/UserViews/userRegistration/UserRegistration'
-
+import UserRegistration from './pages/UserViews/userRegistration/UserRegistration';
 import NotFound from './pages/UserViews/not-found/NotFound';
+import AdminHome from './pages/AmindViews/adminHome/AdminHome';
+import AdminSales from './pages/AmindViews/adminSales/SalesAdmin';
+import EditProduct from './pages/AmindViews/admineditProduct/AdminEditProduct';
+import AddProduct from './pages/AmindViews/addProduct/addProduct';
 
 const router = createBrowserRouter([
   {
@@ -44,7 +47,24 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <  NotFound />
-  }
+  },
+  {
+    path: "/ADMIN/Home",
+    element: <  AdminHome />
+  },
+  {
+    path: "/ADMIN/Sales",
+    element: <  AdminSales />
+  },  
+  {
+    path: "/ADMIN/AddProduct",
+    element: <  AddProduct />
+  },  
+  {
+    path: "/ADMIN/EditProduct",
+    element: <  EditProduct />
+  },  
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

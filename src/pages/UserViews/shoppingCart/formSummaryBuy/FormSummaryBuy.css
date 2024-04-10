@@ -1,0 +1,44 @@
+.container-summaryBuy {
+    width: 90%;
+    height: 100%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: rgba(230, 229, 229, 0.542);
+}
+
+.container-summaryBuy h1 {
+    text-align: center;
+}
+
+.info-product-summaryBuy {
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+    padding: 0 5%;
+    font-size: 130%;
+}
+
+.info-delivery-summaryBuy {
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+    padding: 0 5%;
+    font-size: 130%;
+}
+
+.line {
+    border: none;
+    height: 2px;
+    background-color: #000;
+    margin: 10% 0;
+}
+
+.container-button-pay {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.button-pay {
+    width: 40%;
+}

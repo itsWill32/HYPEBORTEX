@@ -1,0 +1,17 @@
+.container-buys {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-buys-forms {
+    width: 85%;
+    display: flex;
+    /* Cambia el display a flex */
+    flex-direction: column;
+    /* Establece la dirección de la flexión a columna */
+    align-items: center;
+    /* Centra los elementos en el eje horizontal */
+}

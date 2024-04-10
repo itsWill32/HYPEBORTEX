@@ -1,8 +1,7 @@
 import React from 'react'
 import './FormRegister.css'
-import GlobalInput from '../../../ui/input/Input'
-import GlobalButton from '../../../ui/button/Button'
-import GlobalLink from '../../../ui/link/Link'
+import GlobalInput from '../../../ui/input/Input';
+import GlobalLink from '../../../ui/link/Link';
 import { FcGoogle } from "react-icons/fc";
 
 
@@ -14,7 +13,7 @@ export default function FormRegister({customClassFormR}) {
             <GlobalInput type={'email'} withLabel={true} label={'Correo Electronico'} placeholder={'ejemplo@gmail.com'} custoClassInput={'input-emailR'} />
             <GlobalInput type={'password'} withLabel={true} label={'Contraseña'} placeholder={'contraseña'} custoClassInput={'input-passwordR'}  />
             <GlobalLink valueStr={'Terminos y Condiciones'} customClassLink={'forget-passwordR'} />
-            <GlobalLink valueStr={'Registrate'}  customClassLink={'button-register-R'} url={'/'} />
+            <GlobalLink valueStr={'Registrate'}  customClassLink={'button-register-R'} url={'/UserRegistration'} />
             
             <p>o</p>
 

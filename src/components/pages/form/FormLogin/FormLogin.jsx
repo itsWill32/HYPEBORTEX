@@ -1,8 +1,7 @@
 import React from 'react'
 import './FormLogin.css'
-import GlobalInput from '../../../ui/input/Input'
-import GlobalButton from '../../../ui/button/Button'
-import GlobalLink from '../../../ui/link/Link'
+import GlobalInput from '../../../ui/input/Input';
+import GlobalLink from '../../../ui/link/Link';
 import { FcGoogle } from "react-icons/fc";
 
 
@@ -18,6 +17,8 @@ export default function FormLogin({customClassFormL}) {
             <p>o</p>
 
             <GlobalLink valueStr={'Continuar con'}  icon={<FcGoogle />} customClassLink={'button-google'} url={'/goggle'}  />
+            <GlobalLink valueStr={'Administrador'}  customClassLink={'button-ADMIN'} url={'/ADMIN/Home'}  />
+
 
         </form>
     </>

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.container-ShoppingCart {
+    padding: 3%;
+    display: flex;
+}
+
+.container-formSummary {
+    height: 90vh;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.container-formShop {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-formSummary-payMethod {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+

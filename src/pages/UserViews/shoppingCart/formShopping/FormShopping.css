@@ -1,0 +1,57 @@
+.conteiner-img {
+    width: 27%;
+    height: 80%;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.conteiner-form-carShop {
+    border-radius: 10px;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid rgb(0, 0, 0);
+    margin-top: 1%;
+}
+
+.container-info-product {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-carShop-product1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-info-product p {
+    color: rgb(140, 140, 140);
+    font-size: 12px;
+}
+
+.container-info-product h1 {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+.form-quantity-product {
+    margin-top: 10%;
+}
+
+
+.delete-icon-container {
+    cursor: pointer;
+    margin-bottom: 20%;
+    display: flex;
+    width: 2.5%;
+}
+
+
+.delete-icon-container>svg {
+    width: 100%;
+    height: 100%;
+    color: red;
+}

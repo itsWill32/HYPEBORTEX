@@ -1,0 +1,28 @@
+.search-nameE {
+  display: flex;
+  align-items: center;
+  margin-left: 2.5%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.input-searchE {
+  width: 20%;
+  margin-left: 1%;
+}
+
+.button-searchE {
+  width: 10%;
+  margin-left: 1%;
+}
+
+.editProduct-containerE {
+  width: 95%;
+  height: 80vh;
+  margin-left: 5%;
+}
+
+.button-keepE {
+  width: 20%;
+  margin-left: 35%;
+}

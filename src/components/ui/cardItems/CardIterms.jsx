@@ -1,6 +1,6 @@
-import React from 'react'
-import './CardItems.css'
-import ButtonLike from './buttonLike/ButtonLike'
+import './CardItems.css';
+import ButtonLike from './buttonLike/ButtonLike';
+import GlobalLink from '../link/Link';
 
 export default function CardItems({customClassCard, image, price, description, stok, showLikeButton }) {
   return (
@@ -28,7 +28,11 @@ export default function CardItems({customClassCard, image, price, description, s
             <div className='description-card'>
                 <h3>{description}</h3>
                 <p>{stok}</p>
+
+                
             </div>
+
+            <GlobalLink valueStr='Comprar' customClassLink={'link-card'} handle={''} url={'/InfoProduct'}/>
 
         </div>
     </>

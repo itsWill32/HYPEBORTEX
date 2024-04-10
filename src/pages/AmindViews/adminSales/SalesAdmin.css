@@ -1,0 +1,49 @@
+.container-salesAdmin {
+    width: 100%;
+    display: flex;
+}
+
+.container-searchSales {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    flex-direction: column;
+}
+
+.container-form-searchSales {
+    width: 40%;
+    height: 20%;
+}
+
+.container-form-searchSales h1 {
+    text-align: center;
+}
+
+.container-form-searchSales input {
+    height: 30%;
+}
+
+.container-sales-dashBoard {
+    width: 35%;
+    padding: 3%;
+}
+
+.sales-dashboard {
+    width: 100%;
+    border: 1px solid black;
+    height: 100vh;
+    background-color: rgba(230, 229, 229, 0.542);
+}
+
+.sales-dashboard h1 {
+    text-align: center;
+}
+
+.container-form-Sales {
+    width: 100%;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

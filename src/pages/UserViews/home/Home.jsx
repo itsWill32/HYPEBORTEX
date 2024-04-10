@@ -10,14 +10,31 @@ import Jeans from '../../../assets/img/jean.png';
 import Navbar from '../../../components/pages/navbar/Nabvar';
 import Login from '../../../components/pages/login/Login';
 import Footer from '../../../components/pages/footer/Footer';
+import ModalUser from '../../../components/ui/modalUser/ModalUser';
 
 export default function Home() {
-    const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Estado para controlar si el usuario está autenticado
+  const [isLoginOpen, setIsLoginOpen] = useState(false); // Estado para controlar si la modal de inicio de sesión está abierta
+
+  const handleLoginOpen = () => {
+    setIsLoginOpen(true);
+  };
+
+  const handleLoginClose = () => {
+    setIsLoginOpen(false);
+  };
+
+  const handleLoginSuccess = () => {
+    setIsAuthenticated(true); // Una vez que el usuario se autentica correctamente, actualizamos el estado de autenticación
+    setIsLoginOpen(false); // También cerramos la modal de inicio de sesión
+  };
 
   return (
     <>
-        <Navbar openLogin={() => setIsLoginModalOpen(true)} />
-        <Login isOpen={isLoginModalOpen} handleClose={() => setIsLoginModalOpen(false)} />
+      <Navbar openLogin={handleLoginOpen} />
+      <Login isOpen={isLoginOpen} handleClose={handleLoginClose} handleLoginSuccess={handleLoginSuccess} />
+      {isAuthenticated && <ModalUser />}
+
         <div className='container-main'> 
             <div className='commercial-container'>
                 <img src={Anuncio} alt="anuncio-main" />

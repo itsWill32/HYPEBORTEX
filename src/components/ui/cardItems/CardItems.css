@@ -30,9 +30,7 @@
     margin-top: 3%;
 }
 
-.container-img{
-    width: 80%;
-}
+
 
 .img-card{
     width: 90%;
@@ -58,4 +56,15 @@
 
 .description-card p{
     color: gray;
+}
+
+.link-card{
+    display: flex;
+    font-size: .8rem;
+    justify-content: center;
+    opacity: 0;
+}
+
+.link-card:hover {
+    opacity: 1;
 }
