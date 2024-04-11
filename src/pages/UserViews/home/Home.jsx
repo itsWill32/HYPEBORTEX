@@ -10,7 +10,7 @@ import Jeans from '../../../assets/img/jean.png';
 import Navbar from '../../../components/pages/navbar/Nabvar';
 import Login from '../../../components/pages/login/Login';
 import Footer from '../../../components/pages/footer/Footer';
-import ModalUser from '../../../components/ui/modalUser/ModalUser';
+import ModalAuth from '../../../components/ui/modalAuth/ModalAuth'
 
 export default function Home() {
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Estado para controlar si el usuario está autenticado
@@ -33,7 +33,7 @@ export default function Home() {
     <>
       <Navbar openLogin={handleLoginOpen} />
       <Login isOpen={isLoginOpen} handleClose={handleLoginClose} handleLoginSuccess={handleLoginSuccess} />
-      {isAuthenticated && <ModalUser />}
+      {isAuthenticated && <ModalAuth />}
 
         <div className='container-main'> 
             <div className='commercial-container'>

@@ -14,11 +14,12 @@ import AdminHome from './pages/AmindViews/adminHome/AdminHome';
 import AdminSales from './pages/AmindViews/adminSales/SalesAdmin';
 import EditProduct from './pages/AmindViews/admineditProduct/AdminEditProduct';
 import AddProduct from './pages/AmindViews/addProduct/addProduct';
+import ModalAuth from './components/ui/modalAuth/ModalAuth'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: < Home />
+    element: < ModalAuth />
   },
   {
     path: "/Clothing",
