@@ -10,7 +10,7 @@ export default function ModalPayMethod({ handleCloseModal }) {
         <span className='close' onClick={handleCloseModal}>&times;</span>
         <p>agregar nuevo metodo de pago</p>
         <div className='new-method-form'>
-        <GlobalInput type={'email'} withLabel={true} label={'ingresa correo de paypal:'} placeholder={'correo'} custoClassInput={'input-paypal'} /> 
+        <GlobalInput name={'Input-Modal-Pay'} onChange={InputChangeM} type={'email'} withLabel={true} label={'ingresa correo de paypal:'} placeholder={'correo'} custoClassInput={'input-paypal'} /> 
         </div>
         <div>
         <GlobalButton content="confirmar pago" customClassButton="button-paypal" />

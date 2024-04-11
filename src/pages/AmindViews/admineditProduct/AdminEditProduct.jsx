@@ -10,7 +10,7 @@ export default function AdminEditProduct() {
     <>
     <NavbarAdmin />
     <div className='search-nameE'>
-         <GlobalInput type={'text'} withLabel={true} label={' ingrese el nombre del articulo a editar:'} placeholder={'nombre'} custoClassInput={'input-searchE'} /> 
+         <GlobalInput name={'Input-NameEdit'} onChange={InputChangeE} type={'text'} withLabel={true} label={' Ingrese el nombre del articulo a editar:'} placeholder={'nombre'} custoClassInput={'input-searchE'} /> 
          <GlobalButton content="buscar articulo" customClassButton="button-searchE" />
    </div>
      <div className='editProduct-containerE'>

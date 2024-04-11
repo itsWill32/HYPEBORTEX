@@ -14,7 +14,7 @@ export default function Nabvar({openLogin}) {
         <div className='main-header'>
 
 
-            <GlobalInput withLabel={false} type={'search'} placeholder={'Buscar'} custoClassInput={'input-Search'} />
+            <GlobalInput name={'Search-Nav'} onChange={InputChangeN} withLabel={false} type={'search'} placeholder={'Buscar'} custoClassInput={'input-Search'} />
             
 
             <nav className='container-nav-Type'>

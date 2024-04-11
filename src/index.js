@@ -19,7 +19,7 @@ import ModalAuth from './components/ui/modalAuth/ModalAuth'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: < ModalAuth />
+    element: < Home />
   },
   {
     path: "/Clothing",

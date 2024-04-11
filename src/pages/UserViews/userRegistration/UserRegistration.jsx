@@ -7,7 +7,7 @@ export default function UserRegistration() {
         <div className='completeRegister'>
             <div className='container-completeRegister'>
                 <div className='container-register-left'>
-                <GlobalInput type={'text'} withLabel={true} label={'nombre completo:'} placeholder={'nombre'} custoClassInput={'input-cpmpleteRegistro'} />
+                <GlobalInput name={''} type={'text'} withLabel={true} label={'nombre completo:'} placeholder={'nombre'} custoClassInput={'input-cpmpleteRegistro'} />
                 <GlobalInput type={'text'} withLabel={true} label={'apellidos completos:'} placeholder={'nombre'} custoClassInput={'input-cpmpleteRegistro'} /> 
                 <GlobalInput type={'text'} withLabel={true} label={'cuidad:'} placeholder={'nombre'} custoClassInput={'input-cpmpleteRegistro'} /> 
                 <GlobalInput type={'text'} withLabel={true} label={'provincia:'} placeholder={'nombre'} custoClassInput={'input-cpmpleteRegistro'} />  

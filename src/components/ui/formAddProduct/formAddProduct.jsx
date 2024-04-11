@@ -30,7 +30,7 @@ export default function FormAddProduct() {
             </div>
             <div className='left-container'>
                 <div className='container-categories'>
-                    <GlobalInput type={'text'} withLabel={true} label={'caracteristicas del articulo:'} placeholder={'nombre'} custoClassInput={'input-description'} /> 
+                    <GlobalInput name={''} type={'text'} withLabel={true} label={'caracteristicas del articulo:'} placeholder={'nombre'} custoClassInput={'input-description'} /> 
                     <GlobalInput type={'text'} withLabel={true} label={'materiales:'} placeholder={'nombre'} custoClassInput={'input-materials'} /> 
                     <label className='label-registro' htmlFor="miSelector">CATEGORIAS:</label>
                     <select className='select-register' id="miSelector">
