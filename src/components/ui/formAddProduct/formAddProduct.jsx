@@ -12,7 +12,7 @@ export default function FormAddProduct() {
         setBody({
             ...body,
             [name]: value
-        })
+        })}
     
 
 
@@ -22,11 +22,11 @@ export default function FormAddProduct() {
     return (
         <div className='registerProduct-content'>
             <div className='right-container'>
-                <GlobalInput name="" onChange={} type={'file'} withLabel={true} label={'Ingresa la imagen de tu archivo'} placeholder={''} custoClassInput={'input-registro'} />   
-                <GlobalInput name="" onChange={} type={'text'} withLabel={true} label={'nombre del articulo:'} placeholder={'nombre'} custoClassInput={'input-registro'} /> 
-                <GlobalInput name="" onChange={} type={'number'} withLabel={true} label={'precio del articulo'} placeholder={'$'} custoClassInput={'input-registro'} />  
-                <GlobalInput name="" onChange={} type={'number'} withLabel={true} label={'talla'} placeholder={'talla'} custoClassInput={'input-registro'} />   
-                <GlobalInput name="" onChange={} type={'number'} withLabel={true} label={'stock'} placeholder={'cantidad'} custoClassInput={'input-registro'} />   
+                <GlobalInput name="" onChange={inputChange} type={'file'} withLabel={true} label={'Ingresa la imagen de tu archivo'} placeholder={''} custoClassInput={'input-registro'} />   
+                <GlobalInput name="" onChange={inputChange} type={'text'} withLabel={true} label={'nombre del articulo:'} placeholder={'nombre'} custoClassInput={'input-registro'} /> 
+                <GlobalInput name="" onChange={inputChange} type={'number'} withLabel={true} label={'precio del articulo'} placeholder={'$'} custoClassInput={'input-registro'} />  
+                <GlobalInput name="" onChange={inputChange} type={'number'} withLabel={true} label={'talla'} placeholder={'talla'} custoClassInput={'input-registro'} />   
+                <GlobalInput name="" onChange={inputChange} type={'number'} withLabel={true} label={'stock'} placeholder={'cantidad'} custoClassInput={'input-registro'} />   
             </div>
             <div className='left-container'>
                 <div className='container-categories'>
@@ -43,4 +43,3 @@ export default function FormAddProduct() {
         </div>
     );
 }
-

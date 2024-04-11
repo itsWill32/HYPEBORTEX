@@ -3,7 +3,7 @@ import FormAddProduct from "../../../components/ui/formAddProduct/formAddProduct
 import GlobalButton from "../../../components/ui/button/Button";
 import NavbarAdmin from "../../../components/pages/adminNavbar/AdminNavbar";
 
-export default function addProduct() {
+export default function AddProduct() {
   return (
     <>
       <NavbarAdmin />
