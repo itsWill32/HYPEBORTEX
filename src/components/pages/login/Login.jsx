@@ -28,6 +28,8 @@ export default function Login({ isOpen, handleClose }) {
     setShowLoginForm(!showLoginForm);
   };
 
+  
+
   return (
     <>
       <div>
@@ -46,7 +48,9 @@ export default function Login({ isOpen, handleClose }) {
                   <GlobalButton content={'INICIA SESION'} customClassButton={'login-Button'} onClickButton={() => setShowLoginForm(true)} type={'submit'} />
                   <GlobalButton content={'REGISTRATE'} customClassButton={'register-Button'} onClickButton={() => setShowLoginForm(false)} type={'submit'} url={'/'} />
                 </nav>
-                {showLoginForm ? <FormLogin customClassFormL={'form-Login'} /> : <FormRegister customClassFormR={'form-Register'} />}
+                
+                {showLoginForm ? <FormLogin customClassFormL={'form-Login'} handleClose={handleClose} /> : <FormRegister customClassFormR={'form-Register'} handleClose={handleClose} />}
+
               </div>
             </div>
           </Box>
