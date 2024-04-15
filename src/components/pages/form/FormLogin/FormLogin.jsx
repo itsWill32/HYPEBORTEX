@@ -6,10 +6,13 @@ import { FcGoogle } from "react-icons/fc";
 import { useState } from 'react';
 import Swal from 'sweetalert2'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function FormLogin({ customClassFormL , handleClose}) {
 
     const [body, setBody] = useState({ email: '', password: '' });
+
+    const navigate = useNavigate();
 
     const InputChangeL = ({ target }) => {
         const { name, value } = target;
@@ -24,9 +27,17 @@ export default function FormLogin({ customClassFormL , handleClose}) {
         try {
             const response = await axios.post('http://localhost:8000/api/auth/login', body);
             const token = response.data.token;
+            const rol = response.data.rolUser;
             localStorage.setItem('token', token);
 
             handleClose();
+
+            console.log(rol);
+
+            if(rol === 'Admin'){
+              console.log('Admin Detected')
+              navigate('/ADMIN/Home');
+            }
             
             let timerInterval;
 
@@ -52,6 +63,8 @@ export default function FormLogin({ customClassFormL , handleClose}) {
                 console.log("I was closed by the timer");
               }
             });
+
+            
 
 
         } catch (error) {

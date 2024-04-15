@@ -12,9 +12,9 @@ import  axios from 'axios'
 
 export default function AdminEditProduct() {
 
-    const [sneakersList, setSneakersList] = useState([])
+   
 
-    const [sneakers, setSneakers] = useState([]);
+    const [sneakersLista, setSneakers] = useState([]);
 
     const getAllProducts = async () => {
             try {
@@ -30,29 +30,23 @@ export default function AdminEditProduct() {
     
           const config = {
             headers: {
-              Authorization: `Bearer ${token}`,
-              'Content-Type': 'multipart/form-data'
+              Authorization: `Bearer ${token}`
             }
           };
     
-          const response = await axios.get(`http://localhost:8000/api/v1/sneakers/allProducts`, config);
-          console.log(response.data);
+          const response = await axios.get('http://localhost:8000/api/v1/sneakers/allProducts', config);
+          const dataRes = response.data.snaekers;
+          console.log(dataRes);
+          setSneakers(dataRes);
+          console.log("esto es la lista local",sneakersLista);
           
         } catch (error) {
           console.error('Error al enviar la petición:', error.message);
         }
 
+    }
 
-
-
-        try {
-          const response = await axios.get('http://localhost:8000/api/v1/sneakers/allProducts');
-          setSneakers(response.data.sneakers);
-          setSneakersList = (response.data) ;
-        } catch (error) {
-          console.error('Error al obtener la lista de sneakers:', error);
-        }
-      };
+    //Peticion Editar
 
     const [formData, setFormData] = useState({
         name: '',
@@ -73,6 +67,8 @@ export default function AdminEditProduct() {
             [name]: value
         });
     };
+
+    
 
     const handleChange = (e) => {
         const { name, value, files } = e.target;
@@ -112,7 +108,7 @@ export default function AdminEditProduct() {
 
       useEffect(() => {
         getAllProducts();
-      }, []);
+      },[sneakersLista], []);
 
    return (
     <>
@@ -121,9 +117,10 @@ export default function AdminEditProduct() {
 
          <select name={'Input-NameEdit'} onChange={inputChange} custoClassInput={'input-searchE'}>
             <option value="">Articula a editar </option>
-            {sneakers.map((product) => (
-                <option value={product.id}>{product.name}</option>
-            ))}
+            {sneakersLista.map(articulo => (
+                <option value={articulo._id}>{articulo.name}</option>
+            ))};
+            
 
          </select>
          <GlobalButton content="buscar articulo" customClassButton="button-searchE" />
