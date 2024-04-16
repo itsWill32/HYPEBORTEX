@@ -39,6 +39,8 @@ export default function FormLogin({ customClassFormL , handleClose}) {
             if(rol === 'Admin'){
               console.log('Admin Detected')
               navigate('/ADMIN/Home');
+            }else{
+              navigate('/home')
             }
             
             let timerInterval;
@@ -47,7 +49,7 @@ export default function FormLogin({ customClassFormL , handleClose}) {
             Swal.fire({
               title: "Inicio Exitoso",
               html: "Cerrando en <b></b> milliseconds.",
-              timer: 3500,
+              timer: 2500,
               timerProgressBar: true,
               didOpen: () => {
                 Swal.showLoading();
