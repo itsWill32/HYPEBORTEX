@@ -29,6 +29,7 @@ export default function Nabvar({openLogin}) {
                 <ul>
                     <GlobalLink  icon={<FiShoppingCart/>} url={'/ShoppingCart'}   />
                     <GlobalLink  icon={<FaHeart/>} />
+                    
                     <GlobalLink  icon={<FaUser/>} handle={openLogin}  />
                 </ul>
             </nav>

@@ -1,0 +1,78 @@
+.editProduct-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3%;
+  }
+
+  .container-edit-parts{
+    display: flex;
+  }
+  
+  .right-container-edit {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .left-container-edit {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .container-categories-edit {
+    height: 10%;
+  }
+  
+  .input-registro {
+    width: 80%;
+    margin-bottom: 5%;
+  }
+  
+  .input-description {
+    width: 80%;
+    height: 18vh;
+    margin-bottom: 5%;
+    display: flex;
+    text-align: start;
+  }
+  
+  .input-materials {
+    width: 80%;
+    height: 10vh;
+    margin-bottom: 5%;
+    display: flex;
+    text-align: start;
+  }
+  
+  .label-registro {
+    display: block;
+  }
+  
+  .select-register {
+    width: 83%;
+    height: 80%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid grey;
+  }
+
+  .search-nameE {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2.5%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.input-searchE {
+  width: 20%;
+  margin-left: 1%;
+}
+
+.button-searchE {
+  width: 10%;
+  margin-left: 1%;
+}

@@ -28,8 +28,10 @@ export default function FormLogin({ customClassFormL , handleClose}) {
             const response = await axios.post('http://localhost:8000/api/auth/login', body);
             const token = response.data.token;
             const rol = response.data.rolUser;
-            localStorage.setItem('token', token);
+            const id = response.data.idUser;
 
+            localStorage.setItem('token', token);
+            localStorage.setItem('IdUser', id);
             handleClose();
 
             console.log(rol);

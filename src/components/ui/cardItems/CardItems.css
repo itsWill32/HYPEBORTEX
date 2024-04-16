@@ -15,6 +15,9 @@
 #main-card:hover{
    border: 1px solid black; 
 }
+.img-card{
+    object-fit: cover;
+}
 
 .container-media{
     width: 100%;

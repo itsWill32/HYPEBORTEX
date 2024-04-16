@@ -86,7 +86,7 @@ export default function FormAddProduct() {
                     <GlobalInput name='materials' onChange={inputChange} type={'text'} withLabel={true} label={'materiales:'} placeholder={'nombre'} custoClassInput={'input-materials'} />
                     <label className='label-registro' htmlFor="miSelector">CATEGORIAS:</label>
                     <select name='category' onChange={inputChange} className='select-register' id="miSelector">
-                        <option value="Elige la categoria"></option>
+                        <option >Elige la categoria</option>
                         <option value="Calzado">Calzado</option>
                         <option value="Ropas">Ropas</option>
                     </select>

@@ -1,20 +1,22 @@
 import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import GlobalLink from '../link/Link';
+import './ModalAuth.css';
 
 const style = {
-  position: 'absolute',
-  transform: 'translate(-50%, -50%)',
-  width: 300,
+  width: 200,
+  height: 50,
   bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
   p: 4,
+  borderRadius: 2,
+  marginLeft: 130,
+  marginTop: 10,
+  color: 'black',
 };
 
-export default function BasicModal() {
+export default function ModalAuth() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -29,7 +31,10 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          
+          <div className='container-modalAuth'>
+            <GlobalLink  valueStr={'Pedidos'} url={'/PurchasesMade'} customClassLink={'link-PeidosMA'} />
+            <GlobalLink  valueStr={'Cerrar Sesion'} url={'/'} customClassLink={'link-LogouthMA'} />
+          </div>
         </Box>
       </Modal>
     </div>

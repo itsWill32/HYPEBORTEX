@@ -7,7 +7,7 @@ import { useState } from 'react';
 import axios from 'axios'
 
 
-export default function FormRegister({customClassFormR}) {
+export default function FormRegister({customClassFormR,handleClose}) {
 
 
   const [body, setBody] = useState({ name : '',email: '', password: '', rol : 'User' ,birthday:'00/00/00' , adress:'None' });
@@ -27,7 +27,8 @@ export default function FormRegister({customClassFormR}) {
           const response = await axios.post('http://localhost:8000/api/auth/register', body, {    
           });
           if (response.status === 200) {
-              
+                handleClose();
+                
               window.location.reload(); 
           }
       } catch (error) {

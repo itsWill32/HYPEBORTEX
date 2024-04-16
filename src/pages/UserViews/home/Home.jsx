@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 import './Home.css';
 import Anuncio from '../../../assets/img/comercial.png';
 import CardItems from '../../../components/ui/cardItems/CardIterms'
@@ -11,8 +11,13 @@ import Navbar from '../../../components/pages/navbar/Nabvar';
 import Login from '../../../components/pages/login/Login';
 import Footer from '../../../components/pages/footer/Footer';
 import ModalAuth from '../../../components/ui/modalAuth/ModalAuth'
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
+
+  const navega = useNavigate();
+
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Estado para controlar si el usuario está autenticado
   const [isLoginOpen, setIsLoginOpen] = useState(false); // Estado para controlar si la modal de inicio de sesión está abierta
 
@@ -29,9 +34,49 @@ export default function Home() {
     setIsLoginOpen(false); // También cerramos la modal de inicio de sesión
   };
 
+  const [sneakersLista, setSneakersLista] = useState([]);
+
+
+  const getAllProducts = async () => {
+    try {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            throw new Error('No se encontró el token JWT en las cookies');
+        }
+
+        const config = {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        };
+
+        const response = await axios.get('http://localhost:8000/api/v1/sneakers/allProducts', config);
+        const dataRes = response.data.snaekers;
+        setSneakersLista(dataRes);
+        console.log('La lista se guardo',dataRes);
+    } catch (error) {
+        console.error('Error al enviar la petición:', error.message);
+    }
+};
+const [selectedProductId, setSelectedProductId] = useState(null);
+
+
+const handleProductClick = (productId) => {
+  setSelectedProductId(productId);
+  localStorage.setItem('espificThing',productId);
+  navega('/InfoProduct')
+
+};
+
+
+useEffect(() => {
+  getAllProducts();
+}, []);
+
   return (
     <>
       <Navbar openLogin={handleLoginOpen} />
+      
       <Login isOpen={isLoginOpen} handleClose={handleLoginClose} handleLoginSuccess={handleLoginSuccess} />
       {isAuthenticated && <ModalAuth />}
 
@@ -43,10 +88,9 @@ export default function Home() {
             <div className='container-sneakers'>
                 <h2>¿Un nuevo par de tenis? Encuentralo aquí</h2>
                 <div className='sneakers'>
-                    <CardItems price={"$416,790"} description={"NIKE MAG BACK TO THE FUTURE"} stok={"SOLD"} showLikeButton={true} image={Producto1} />
-                    <CardItems price={'$416,790'} description={'NIKE MAG BACK TO THE FUTURE'} stok={'SOLD'} showLikeButton={true} image={Producto2} />
-                    <CardItems price={'$416,790'} description={'NIKE MAG BACK TO THE FUTURE'} stok={'SOLD'} showLikeButton={true} image={Producto3} />
-                    <CardItems price={'$416,790'} description={'NIKE MAG BACK TO THE FUTURE'} stok={'SOLD'} showLikeButton={true} image={Producto1} />
+                    {sneakersLista.map(product => (
+                      <CardItems onClick={() => handleProductClick(product._id)} price={`$ MXN ${product.price}`} description={product.name} stok={`Stock: ${product.stock}`} showLikeButton={true} image={`http://localhost:8000${product.imageURL}`} />
+                    ))}
                 </div>
             </div>
 

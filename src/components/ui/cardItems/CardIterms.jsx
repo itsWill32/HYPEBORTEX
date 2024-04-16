@@ -2,7 +2,7 @@ import './CardItems.css';
 import ButtonLike from './buttonLike/ButtonLike';
 import GlobalLink from '../link/Link';
 
-export default function CardItems({customClassCard, image, price, description, stok, showLikeButton }) {
+export default function CardItems({customClassCard, image, price, description, stok, showLikeButton , onClick}) {
   return (
     <>
         <div id='main-card' className={customClassCard}>
@@ -31,8 +31,9 @@ export default function CardItems({customClassCard, image, price, description, s
 
                 
             </div>
-
-            <GlobalLink valueStr='Comprar' customClassLink={'link-card'} handle={''} url={'/InfoProduct'}/>
+            
+        
+            <GlobalLink valueStr='Comprar' customClassLink={'link-card'} handleLink={onClick}/>
 
         </div>
     </>
