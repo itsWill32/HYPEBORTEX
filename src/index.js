@@ -14,11 +14,16 @@ import AdminHome from './pages/AmindViews/adminHome/AdminHome';
 import AdminSales from './pages/AmindViews/adminSales/SalesAdmin';
 import EditProduct from './pages/AmindViews/admineditProduct/AdminEditProduct';
 import AddProduct from './pages/AmindViews/addProduct/addProduct';
+import HomeAuth from './pages/UserViews/homeAuth/HomeAuth';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: < Home />
+  },
+  {
+    path: "/Home",
+    element: <HomeAuth/>
   },
   {
     path: "/Clothing",

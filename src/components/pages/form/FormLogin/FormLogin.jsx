@@ -87,11 +87,11 @@ export default function FormLogin({ customClassFormL , handleClose}) {
                 <GlobalInput name={'email'} onChange={InputChangeL} type={'email'} withLabel={true} label={'Correo Electronico'} placeholder={'ejemplo@gmail.com'} custoClassInput={'input-email'} />
                 <GlobalInput name={'password'} onChange={InputChangeL} type={'password'} withLabel={true} label={'Contraseña'} placeholder={'contraseña'} custoClassInput={'input-password'} />
                 <GlobalLink valueStr={'¿Haz olvidado tu contraseña?'} customClassLink={'forget-password'} />
-                <button className="button-login" onClick={handleLogin}>Inicia sesión</button>
+                <GlobalLink customClassLink="button-login" handleLink={handleLogin} valueStr='Iniciar sesion' url={'/home'} />
                 
                 <p>o</p>
 
-                <GlobalLink valueStr={'Continuar con'}  icon={<FcGoogle />} customClassLink={'button-google'} url={'/goggle'}  />
+                <GlobalLink valueStr={'Registrate'}   customClassLink={'button-google'} url={'/UserRegistration'}  />
 
             </form>
         </>

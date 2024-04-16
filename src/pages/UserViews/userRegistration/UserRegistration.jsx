@@ -1,6 +1,6 @@
-import GlobalButton from '../../../components/ui/button/Button';
 import './UserRegistration.css'
 import GlobalInput from '../../../components/ui/input/Input';
+import GlobalLink from '../../../components/ui/link/Link';
 
 export default function UserRegistration() {
     return (
@@ -20,7 +20,7 @@ export default function UserRegistration() {
                 </div>
             </div>
             <div className="button-register-container">
-            <GlobalButton content="Guardar DAtos" customClassButton="button-register" />
+            <GlobalLink valueStr="Guardar Datos" customClassLink="button-register" url={'/home'} />
             </div>
         </div>
     );

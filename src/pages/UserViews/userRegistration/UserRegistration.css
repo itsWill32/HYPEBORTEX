@@ -24,7 +24,14 @@
 
 .button-register{
     width: 50%;
-    
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
 .container-register-left{

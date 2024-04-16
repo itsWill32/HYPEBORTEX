@@ -1,0 +1,21 @@
+.container-modalAuth{
+    display: flex;
+    flex-direction: column;
+}
+
+.link-PeidosMA{
+    font-size:1rem;
+}
+
+.link-LogouthMA{
+    width: 50%;
+    height: 5vh;
+    color: white;
+    background-color: black;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+}

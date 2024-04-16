@@ -23,12 +23,17 @@ const styleModal = {
 
 export default function Login({ isOpen, handleClose }) {
   const [showLoginForm, setShowLoginForm] = useState(true);
+  const [showRegisterForm, setShowRegisterForm] = useState(false);
 
-  const toggleForm = () => {
-    setShowLoginForm(!showLoginForm);
+  const showLogin = () => {
+    setShowLoginForm(true);
+    setShowRegisterForm(false);
   };
 
-  
+  const showRegister = () => {
+    setShowLoginForm(false);
+    setShowRegisterForm(true);
+  };
 
   return (
     <>
@@ -45,11 +50,10 @@ export default function Login({ isOpen, handleClose }) {
               <h2>Entra en HYPEBORTEX</h2>
               <div className='container-formL'>
                 <nav className='nav-modal'>
-                  <GlobalButton content={'INICIA SESION'} customClassButton={'login-Button'} onClickButton={() => setShowLoginForm(true)} type={'submit'} />
-                  <GlobalButton content={'REGISTRATE'} customClassButton={'register-Button'} onClickButton={() => setShowLoginForm(false)} type={'submit'} url={'/'} />
+                  <GlobalButton content={'INICIA SESION'} customClassButton={'login-Button'} onClickButton={showLogin} type={'submit'} />
                 </nav>
                 
-                {showLoginForm ? <FormLogin customClassFormL={'form-Login'} handleClose={handleClose} /> : <FormRegister customClassFormR={'form-Register'} handleClose={handleClose} />}
+                {showLoginForm && <FormLogin customClassFormL={'form-Login'} handleClose={handleClose} />}
 
               </div>
             </div>
