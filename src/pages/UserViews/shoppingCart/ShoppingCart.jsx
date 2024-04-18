@@ -6,6 +6,7 @@ import Navbar from '../../../components/pages/navbar/Nabvar';
 import Login from '../../../components/pages/login/Login';
 import Footer from '../../../components/pages/footer/Footer';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 export default  function ShoppingCart() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -32,6 +33,8 @@ export default  function ShoppingCart() {
         };
         console.log(idPro);
       const response = await axios.get(`http://54.162.120.128:8000/api/auth/getUsr/${idPro}`,config);
+      const dataUsr = response.data.user.shopingcar;
+      console.log('Replace',dataUsr)
       setUserLista(response.data.user);
       console.log( "Data que se guarda " ,response.data.user.shopingcar[0]);
       const id = response.data.user.shopingcar[0] ;
@@ -49,6 +52,8 @@ export default  function ShoppingCart() {
   //Buscar el temmios 
   const getSnk = async (id) => {
     const idPro = id
+
+   
     try {
       const token = localStorage.getItem('token');
         if (!token) {
@@ -66,7 +71,11 @@ export default  function ShoppingCart() {
       console.log( "Data que se guarda del shoe" ,response.data.snk);
     } catch (error) {
       if (error.response && error.response.status === 404) {
-        throw new Error('ID no encontrado');
+        Swal.fire({
+          title: "Ningun Producto Agregado",
+          text: "No products",
+          icon: "question"
+        });
       } else {
         throw new Error('Error del servidor');
       }

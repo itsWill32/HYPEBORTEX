@@ -3,6 +3,7 @@ import React from 'react';
 import GlobalInput from '../input/Input';
 import  axios from 'axios'
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 
 
 
@@ -58,7 +59,12 @@ export default function FormAddProduct() {
     
           const response = await axios.post('http://54.162.120.128:8000/api/v1/sneakers/createSnk', formDataToSend, config);
           console.log(response.data);
-          alert('Exsitosamente Agregado')
+          Swal.fire({
+            title: "Agregado con Exito!",
+            text: "Succes!",
+            icon: "success"
+          });
+          window.location.reload(true);
         } catch (error) {
           console.error('Error al enviar la petición:', error.message);
         }

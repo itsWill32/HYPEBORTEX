@@ -23,9 +23,12 @@ export default function FormLogin({ customClassFormL , handleClose}) {
     };
     const handleLogin = async (e) => {
         e.preventDefault();
+
+        console.log('Entrada Peticion',body);
         
         try {
-            const response = await axios.post('http://localhost:8000/api/auth/login', body);
+            const response = await axios.post('http://54.162.120.128:8000/api/auth/login',body);
+           
             const token = response.data.token;
             const rol = response.data.rolUser;
             const id = response.data.idUser;
