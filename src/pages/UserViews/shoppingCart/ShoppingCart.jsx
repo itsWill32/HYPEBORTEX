@@ -1,8 +1,7 @@
 import './ShoppingCart.css';
 import { useState , useEffect} from 'react';
 import FormShopping from './formShopping/FormShopping';
-import FormSummaryBuy from './formSummaryBuy/FormSummaryBuy'; 
-import PaymentMethod from './paymentMethod/PaymentMethod';
+import FormSummaryBuy from './formSummaryBuy/FormSummaryBuy';   
 import Navbar from '../../../components/pages/navbar/Nabvar';
 import Login from '../../../components/pages/login/Login';
 import Footer from '../../../components/pages/footer/Footer';

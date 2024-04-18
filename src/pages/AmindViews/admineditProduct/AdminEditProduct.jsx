@@ -1,6 +1,4 @@
 import './AdminEditProduct.css';
-import GlobalInput from '../../../components/ui/input/Input';
-import GlobalButton from '../../../components/ui/button/Button';
 import FormEditProduct from '../../../components/ui/formEditProduct/FormEditProduct';
 import NavbarAdmin from '../../../components/pages/adminNavbar/AdminNavbar'
 

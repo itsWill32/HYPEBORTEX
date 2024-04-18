@@ -2,9 +2,6 @@ import { useState , useEffect} from 'react';
 import './Home.css';
 import Anuncio from '../../../assets/img/comercial.png';
 import CardItems from '../../../components/ui/cardItems/CardIterms'
-import Producto1 from "../../../assets/img/NikeMag.png";
-import Producto2 from "../../../assets/img/mcqueen.png";
-import Producto3 from "../../../assets/img/Nike-Freddy-Krueger.png";
 import Short from '../../../assets/img/short.png';
 import Jeans from '../../../assets/img/jean.png';
 import Navbar from '../../../components/pages/navbar/Nabvar';

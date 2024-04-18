@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import './Login.css';
 import FormLogin from '../form/FormLogin/FormLogin';
-import FormRegister from '../form/FormRegister/FormRegister';
+
 import GlobalButton from '../../ui/button/Button';
 
 const styleContentModal = {
@@ -23,17 +23,14 @@ const styleModal = {
 
 export default function Login({ isOpen, handleClose }) {
   const [showLoginForm, setShowLoginForm] = useState(true);
-  const [showRegisterForm, setShowRegisterForm] = useState(false);
+
 
   const showLogin = () => {
     setShowLoginForm(true);
-    setShowRegisterForm(false);
+    
   };
 
-  const showRegister = () => {
-    setShowLoginForm(false);
-    setShowRegisterForm(true);
-  };
+  
 
   return (
     <>

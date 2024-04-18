@@ -12,23 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function HomeAuth() {
 
-    const navega = useNavigate();
-
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // Estado para controlar si el usuario está autenticado
-  const [isLoginOpen, setIsLoginOpen] = useState(false); // Estado para controlar si la modal de inicio de sesión está abierta
-
-  const handleLoginOpen = () => {
-    setIsLoginOpen(true);
-  };
-
-  const handleLoginClose = () => {
-    setIsLoginOpen(false);
-  };
-
-  const handleLoginSuccess = () => {
-    setIsAuthenticated(true); // Una vez que el usuario se autentica correctamente, actualizamos el estado de autenticación
-    setIsLoginOpen(false); // También cerramos la modal de inicio de sesión
-  };
+  const navega = useNavigate();
 
   const [sneakersLista, setSneakersLista] = useState([]);
 

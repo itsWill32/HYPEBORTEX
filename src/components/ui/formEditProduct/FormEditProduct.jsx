@@ -7,7 +7,7 @@ import axios from 'axios';
 
 
 export default function FormEditProduct() {
-    const nabigate = useNavigate();
+    
     const [selectedProductId, setSelectedProductId] = useState('');
     const [productData, setProductData] = useState({
         _id: '',

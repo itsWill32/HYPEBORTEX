@@ -2,7 +2,7 @@ import React from 'react';
 import './FormLogin.css';
 import GlobalInput from '../../../ui/input/Input';
 import GlobalLink from '../../../ui/link/Link';
-import { FcGoogle } from "react-icons/fc";
+
 import { useState } from 'react';
 import Swal from 'sweetalert2'
 import axios from 'axios';

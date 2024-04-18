@@ -32,32 +32,7 @@ export default  function SalesAdmin () {
         }
     };
     //get tennis
-    const [sneakersLista, setSneakersLista] = useState([]);
-    const getSnk = async (id) => {
-        const idPro = id;
-        try {
-          const token = localStorage.getItem('token');
-            if (!token) {
-                throw new Error('No se encontró el token JWT en las cookies');
-            }
     
-            const config = {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            };
-            console.log(idPro);
-          const response = await axios.get(`http://54.162.120.128:8000/api/v1/sneakers/productUnique/${idPro}`,config);
-          setSneakersLista(response.data.snk);
-          console.log( "Data que se guarda " ,response.data.snk);
-        } catch (error) {
-          if (error.response && error.response.status === 404) {
-            throw new Error('ID no encontrado');
-          } else {
-            throw new Error('Error del servidor');
-          }
-        }
-      }
 
     //get user
 
