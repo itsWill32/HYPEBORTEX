@@ -1,15 +1,64 @@
 import '../home/Home';
 import Anuncio from '../../../assets/img/comercial.png';
 import CardItems from '../../../components/ui/cardItems/CardIterms'
-import Producto1 from "../../../assets/img/NikeMag.png";
-import Producto2 from "../../../assets/img/mcqueen.png";
-import Producto3 from "../../../assets/img/Nike-Freddy-Krueger.png";
 import Short from '../../../assets/img/short.png';
 import Jeans from '../../../assets/img/jean.png';
 import Footer from '../../../components/pages/footer/Footer';
 import NabvarAuth from '../../../components/pages/navbarAuth/NavbarAuth';
+import { useState , useEffect} from 'react';
+
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function HomeAuth() {
+
+    const navega = useNavigate();
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Estado para controlar si el usuario está autenticado
+  const [isLoginOpen, setIsLoginOpen] = useState(false); // Estado para controlar si la modal de inicio de sesión está abierta
+
+  const handleLoginOpen = () => {
+    setIsLoginOpen(true);
+  };
+
+  const handleLoginClose = () => {
+    setIsLoginOpen(false);
+  };
+
+  const handleLoginSuccess = () => {
+    setIsAuthenticated(true); // Una vez que el usuario se autentica correctamente, actualizamos el estado de autenticación
+    setIsLoginOpen(false); // También cerramos la modal de inicio de sesión
+  };
+
+  const [sneakersLista, setSneakersLista] = useState([]);
+
+
+  const getAllProducts = async () => {
+    try {
+        
+        const response = await axios.get('http://54.162.120.128:8000/api/v1/sneakers/allProducts');
+        const dataRes = response.data.snaekers;
+        setSneakersLista(dataRes);
+        console.log('La lista se guardo',dataRes);
+    } catch (error) {
+        console.error('Error al enviar la petición:', error.message);
+    }
+};
+const [selectedProductId, setSelectedProductId] = useState(null);
+
+
+const handleProductClick = (productId) => {
+  setSelectedProductId(productId);
+  localStorage.setItem('espificThing',productId);
+  navega('/InfoProduct')
+
+};
+
+
+useEffect(() => {
+  getAllProducts();
+}, []);
+
   
 
   return (
@@ -17,7 +66,7 @@ export default function HomeAuth() {
       <NabvarAuth  />
       
 
-        <div className='container-main'> 
+      <div className='container-main'> 
             <div className='commercial-container'>
                 <img src={Anuncio} alt="anuncio-main" />
             </div>
@@ -25,10 +74,9 @@ export default function HomeAuth() {
             <div className='container-sneakers'>
                 <h2>¿Un nuevo par de tenis? Encuentralo aquí</h2>
                 <div className='sneakers'>
-                    <CardItems price={"$416,790"} description={"NIKE MAG BACK TO THE FUTURE"} stok={"SOLD"} showLikeButton={true} image={Producto1} />
-                    <CardItems price={'$416,790'} description={'NIKE MAG BACK TO THE FUTURE'} stok={'SOLD'} showLikeButton={true} image={Producto2} />
-                    <CardItems price={'$416,790'} description={'NIKE MAG BACK TO THE FUTURE'} stok={'SOLD'} showLikeButton={true} image={Producto3} />
-                    <CardItems price={'$416,790'} description={'NIKE MAG BACK TO THE FUTURE'} stok={'SOLD'} showLikeButton={true} image={Producto1} />
+                    {sneakersLista.map(product => (
+                      <CardItems onClick={() => handleProductClick(product._id)} price={`$ MXN ${product.price}`} description={product.name} stok={`Stock: ${product.stock}`} showLikeButton={true} image={`http://54.162.120.128:8000${product.imageURL}`} />
+                    ))}
                 </div>
             </div>
 

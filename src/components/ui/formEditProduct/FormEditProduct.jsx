@@ -44,7 +44,7 @@ export default function FormEditProduct() {
                 }
             };
 
-            const response = await axios.get('http://localhost:8000/api/v1/sneakers/allProducts', config);
+            const response = await axios.get('http://54.162.120.128:8000/api/v1/sneakers/allProducts', config);
             const dataRes = response.data.snaekers;
             setSneakersLista(dataRes);
         } catch (error) {
@@ -75,7 +75,7 @@ export default function FormEditProduct() {
                 }
             };
 
-            const response = await axios.put(`http://localhost:8000/api/v1/sneakers/esditSnk/${selectedProductId}`, productData, config);
+            const response = await axios.put(`http://54.162.120.128:8000/api/v1/sneakers/esditSnk/${selectedProductId}`, productData, config);
             console.log(response.data);
             window.location.reload()
             
@@ -98,7 +98,7 @@ export default function FormEditProduct() {
                 }
             };
 
-            const response = await axios.delete(`http://localhost:8000/api/v1/sneakers/deleteSnk/${selectedProductId}`, config);
+            const response = await axios.delete(`http://54.162.120.128:8000/api/v1/sneakers/deleteSnk/${selectedProductId}`, config);
             console.log(response.data);
             
             window.location.reload()

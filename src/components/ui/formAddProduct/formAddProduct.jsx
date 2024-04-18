@@ -56,7 +56,7 @@ export default function FormAddProduct() {
             }
           };
     
-          const response = await axios.post('http://localhost:8000/api/v1/sneakers/createSnk', formDataToSend, config);
+          const response = await axios.post('http://54.162.120.128:8000/api/v1/sneakers/createSnk', formDataToSend, config);
           console.log(response.data);
           alert('Exsitosamente Agregado')
         } catch (error) {
@@ -87,8 +87,8 @@ export default function FormAddProduct() {
                     <label className='label-registro' htmlFor="miSelector">CATEGORIAS:</label>
                     <select name='category' onChange={inputChange} className='select-register' id="miSelector">
                         <option >Elige la categoria</option>
-                        <option value="Calzado">Calzado</option>
-                        <option value="Ropas">Ropas</option>
+                        <option value="Sneaker">Calzado</option>
+                        <option value="Clothes">Ropas</option>
                     </select>
                 </div>
                 <br />

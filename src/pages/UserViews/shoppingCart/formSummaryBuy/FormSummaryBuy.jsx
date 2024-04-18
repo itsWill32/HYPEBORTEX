@@ -37,7 +37,7 @@ const FormSummaryBuy = ({ productCount, productTotal, deliveryCost, totalPrice ,
       };
 
       // Utiliza JSON.stringify para serializar el objeto formData
-      const response = await axios.post('http://localhost:8000/api/v1/sales/venta', formData, config);
+      const response = await axios.post('http://54.162.120.128:8000/api/v1/sales/venta', formData, config);
       console.log(response.data);
       Swal.fire({
         title: "Compra Exitosa!",

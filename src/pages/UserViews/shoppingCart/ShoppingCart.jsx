@@ -32,7 +32,7 @@ export default  function ShoppingCart() {
             }
         };
         console.log(idPro);
-      const response = await axios.get(`http://localhost:8000/api/auth/getUsr/${idPro}`,config);
+      const response = await axios.get(`http://54.162.120.128:8000/api/auth/getUsr/${idPro}`,config);
       setUserLista(response.data.user);
       console.log( "Data que se guarda " ,response.data.user.shopingcar[0]);
       const id = response.data.user.shopingcar[0] ;
@@ -62,7 +62,7 @@ export default  function ShoppingCart() {
             }
         };
         console.log(idPro);
-      const response = await axios.get(`http://localhost:8000/api/v1/sneakers/productUnique/${idPro}`,config);
+      const response = await axios.get(`http://54.162.120.128:8000/api/v1/sneakers/productUnique/${idPro}`,config);
       setSneakersLista(response.data.snk);
       console.log( "Data que se guarda del shoe" ,response.data.snk);
     } catch (error) {

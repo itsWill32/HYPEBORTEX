@@ -23,7 +23,7 @@ export default  function SalesAdmin () {
                 }
             };
     
-            const response = await axios.get('http://localhost:8000/api/v1/sales/ventasData', config);
+            const response = await axios.get('http://54.162.120.128:8000/api/v1/sales/ventasData', config);
             const dataRes = response.data.ventas;
             setVentaDatos(dataRes);
             console.log('La lista se guardo',dataRes);
@@ -47,7 +47,7 @@ export default  function SalesAdmin () {
                 }
             };
             console.log(idPro);
-          const response = await axios.get(`http://localhost:8000/api/v1/sneakers/productUnique/${idPro}`,config);
+          const response = await axios.get(`http://54.162.120.128:8000/api/v1/sneakers/productUnique/${idPro}`,config);
           setSneakersLista(response.data.snk);
           console.log( "Data que se guarda " ,response.data.snk);
         } catch (error) {

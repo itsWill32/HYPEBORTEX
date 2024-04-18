@@ -31,7 +31,7 @@ export default function Product ({ productName, productDescription, productPrice
             }
         };
         console.log(idPro);
-      const response = await axios.get(`http://localhost:8000/api/v1/sneakers/productUnique/${idPro}`,config);
+      const response = await axios.get(`http://54.162.120.128:8000/api/v1/sneakers/productUnique/${idPro}`,config);
       setSneakersLista(response.data.snk);
       console.log( "Data que se guarda " ,response.data.snk);
     } catch (error) {
@@ -52,7 +52,7 @@ export default function Product ({ productName, productDescription, productPrice
 
     e.preventDefault();
     const idUser = localStorage.getItem('IdUser');
-    const shopingcar = sneakersLista._id ;
+   
 
     console.log('El queanda',idUser);
     try {
@@ -68,7 +68,7 @@ export default function Product ({ productName, productDescription, productPrice
             }
         };
         console.log('Antes de entrar',productData);
-        const response = await axios.put(`http://localhost:8000/api/auth/EditUsr/${idUser}`,productData, config);
+        const response = await axios.put(`http://54.162.120.128:8000/api/auth/EditUsr/${idUser}`,productData, config);
         console.log(response.data);
         Swal.fire({
           title: "Agregado Exitosamente",
@@ -93,7 +93,7 @@ useEffect(() => {
      <Login isOpen={isLoginModalOpen} handleClose={() => setIsLoginModalOpen(false)} />
       <div className='contenedor-page-product'>
       <div className="container-picture">
-        <img src={`http://localhost:8000${sneakersLista.imageURL}`} alt="" srcset="" />
+        <img src={`http://54.162.120.128:8000${sneakersLista.imageURL}`} alt="" srcset="" />
       </div>
            <div className='container-data-product'>
              <div className='name-product'>

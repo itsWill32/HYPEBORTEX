@@ -24,9 +24,11 @@ export default function UserRegistration() {
       e.preventDefault();
 
       try {
-          const response = await axios.post('http://localhost:8000/api/auth/register', body);
+          const response = await axios.post('http://54.162.120.128:8000/api/auth/register', body);
           const token = response.data.token;
-          localStorage.setItem('token',token)
+          const id = response.data.id;
+          localStorage.setItem('token', token);
+          localStorage.setItem('IdUser', id);
           navegador('/home')
           let timerInterval;
           Swal.fire({

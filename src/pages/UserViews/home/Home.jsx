@@ -39,18 +39,7 @@ export default function Home() {
 
   const getAllProducts = async () => {
     try {
-        const token = localStorage.getItem('token');
-        if (!token) {
-            throw new Error('No se encontró el token JWT en las cookies');
-        }
-
-        const config = {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        };
-
-        const response = await axios.get('http://localhost:8000/api/v1/sneakers/allProducts', config);
+        const response = await axios.get('http://54.162.120.128:8000/api/v1/sneakers/allProducts');
         const dataRes = response.data.snaekers;
         setSneakersLista(dataRes);
         console.log('La lista se guardo',dataRes);
@@ -89,7 +78,7 @@ useEffect(() => {
                 <h2>¿Un nuevo par de tenis? Encuentralo aquí</h2>
                 <div className='sneakers'>
                     {sneakersLista.map(product => (
-                      <CardItems onClick={() => handleProductClick(product._id)} price={`$ MXN ${product.price}`} description={product.name} stok={`Stock: ${product.stock}`} showLikeButton={true} image={`http://localhost:8000${product.imageURL}`} />
+                      <CardItems onClick={() => handleProductClick(product._id)} price={`$ MXN ${product.price}`} description={product.name} stok={`Stock: ${product.stock}`} showLikeButton={true} image={`http://54.162.120.128:8000${product.imageURL}`} />
                     ))}
                 </div>
             </div>

@@ -24,7 +24,7 @@ export default function FormRegister({customClassFormR,handleClose}) {
       e.preventDefault();
 
       try {
-          const response = await axios.post('http://localhost:8000/api/auth/register', body, {    
+          const response = await axios.post('http://34.236.185.127:8000/api/auth/register', body, {    
           });
           if (response.status === 200) {
                 handleClose();

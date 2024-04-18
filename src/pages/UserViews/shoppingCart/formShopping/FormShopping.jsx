@@ -6,7 +6,7 @@ function FormShopping({ name, size, price, quantity , imgUrl}) {
       <>
         <div className='conteiner-form-carShop'>
             <div className='conteiner-img'>
-                <img  src={`http://localhost:8000${imgUrl}`} alt="" />
+                <img  src={`http://54.162.120.128:8000${imgUrl}`} alt="" />
             </div>
             <div className='container-info-product'>
                 <div className='data-carShop-product1'>
